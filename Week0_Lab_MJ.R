@@ -20,6 +20,63 @@ library(vcfR)
 library(pinfsc50)
 library(utils)
 
+install.packages("pinfsc50")
+install.packages("vcfR")
+
+library(pinfsc50)
+library(vcfR)
+
+#Swirl tutorial for Week1 Lab
+require(swirl)
+swirl()
+Molly
+1
+1
+
+data(ralu.loci)
+
+View(ralu.loci)
+1
+
+write.csv(ralu.loci, file = "ralu.loci.csv", row.names=FALSE)
+
+Frogs <- read.csv("ralu.loci.csv")
+
+head(Frogs)
+3
+
+class(Frogs)
+
+lapply(Frogs, class)
+4
+Frogs$A
+
+as.factor(Frogs$A)
+
+Frogs2 <- read_csv("ralu.loci.csv")
+
+lapply(Frogs2, class)
+
+?read_population
+
+1
+2
+Frogs[1:5,3:10]
+1
+#introducing gstudio package
+Frogs.gstudio <- read_population(path="ralu.loci.csv", type="separated",
+locus.columns=c(3:10))
+
+Frogs.gstudio <- read_population("ralu.loci.csv", "separated", c(3:10))
+
+class(Frogs.gstudio)
+
+lapply(Frogs.gstudio, class)
+
+Frogs.gstudio[1,3]
+
+#introducing adegenet
+
 
 
 
