@@ -75,19 +75,25 @@ lapply(Frogs.gstudio, class)
 
 Frogs.gstudio[1,3]
 
-#introducing adegenet
+#introducing adegenet package
+help(df2genind)
+?df2genind
+1
 
+Frogs.genind <- df2genind(X = Frogs2[,3:10], sep = ":", pop =
+ as.factor(Frogs2$Pop), NA.char = NA, ploidy = 2, type = "codom")
 
+Frogs.genind
 
+head(Frogs.genind@tab)
 
+dim(Frogs.genind@tab)
 
-
-
-
-
-
-
-
+#want this graded?
+#I checked and did not see our institution listed, so I'm assuming not
+2
+#Week1 Lab Tutorial Completed
+#############################
 
 
 
