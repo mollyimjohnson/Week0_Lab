@@ -96,7 +96,7 @@ dim(Frogs.genind@tab)
 #############################
 
 
-
+git push 'remote_name' 'branch_name'
 
 
 
